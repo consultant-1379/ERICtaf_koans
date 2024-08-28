@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CLIToolTest">
+
+ <test name="CLIToolTest">
+  <classes>
+   <class
+    name="com.ericsson.cifwk.taf.koans.clitools.test.cases.CLIToolsTestCase" />
+  </classes>
+ </test>
+
+</suite>

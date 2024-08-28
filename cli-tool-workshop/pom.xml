@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>ERICtaf_koans</artifactId>
+        <version>1.0.217-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>cli-tool-workshop</artifactId>
+    <packaging>jar</packaging>
+
+    <scm>
+        <developerConnection>${ericsson.scm.url}/${project.artifactId}</developerConnection>
+        <connection>${ericsson.scm.url}/${project.artifactId}</connection>
+        <tag>ERICtaf_koans-1.0.1</tag>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>cli-tool</artifactId>
+            <version>2.32.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.cifwk.taf</groupId>
+            <artifactId>jsch-cli-tool</artifactId>
+            <version>2.32.4</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

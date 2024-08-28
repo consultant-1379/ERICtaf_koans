@@ -1,0 +1,47 @@
+[
+  {
+    "hostname": "gateway",
+    "ip": "141.137.173.208",
+    "type": "gateway",
+    "users": [
+      {
+        "username": "root",
+        "password": "shroot",
+        "type": "admin"
+      }
+    ],
+    "ports": {
+      "ssh": 22
+    }
+  },
+  {
+    "hostname": "grafana",
+    "ip": "192.168.0.206",
+    "type": "gateway",
+    "users": [
+      {
+        "username": "root",
+        "password": "shroot",
+        "type": "admin"
+      }
+    ],
+    "ports": {
+      "ssh": 22
+    }
+  },
+  {
+    "hostname": "saiku",
+    "ip": "192.168.0.207",
+    "type": "gateway",
+    "users": [
+      {
+        "username": "root",
+        "password": "shroot",
+        "type": "admin"
+      }
+    ],
+    "ports": {
+      "ssh": 22
+    }
+  }
+]

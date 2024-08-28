@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAF UI Workshop: Implicit Retries</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<script src="jquery-2.2.3.min.js"></script>
+
+<br/><br/>Absent button (will appear in 3 seconds):
+<span id="buttonContainer"></span>
+
+<br/><br/>Invisible button:
+<button id="invisibleButton" onclick="clickMe(this)" style="display: none;">I was invisible</button>
+
+<br/><br/>Hidden button:
+<button id="hiddenButton" onclick="clickMe(this)" style="visibility: hidden;">I am hidden</button>
+
+<br/><br/>Disabled button:
+<button id="disabledButton" onclick="clickMe(this)" disabled>I was disabled</button>
+
+<br/><br/>Button outside of browser screen:
+<button id="outerButton" onclick="clickMe(this)" style="position: absolute; left: -150px">I was located outside page</button>
+
+<br/><br/>Button hidden behind other UI element:
+<button id="coveredButton" onclick="clickMe(this)">I was hidden behind other panel</button>
+<span id="panelCoveringButton" style="position: absolute; left: 350px; padding: 10px; background: red">Panel over the button</span>
+
+<script language="JavaScript">
+    $(document).ready(function() {
+        setTimeout("$(\"#buttonContainer\").append(\"<button id=\\\"asyncButton\\\" onclick=\\\"clickMe(this)\\\">I was absent</button>\")", 3000);
+        setTimeout("$(\"#invisibleButton\").removeAttr(\"style\")", 3000);
+        setTimeout("$(\"#hiddenButton\").removeAttr(\"style\")", 3000);
+        setTimeout("$(\"#disabledButton\").removeAttr(\"disabled\")", 3000);
+        setTimeout("$(\"#outerButton\").removeAttr(\"style\")", 3000);
+        setTimeout("$('#panelCoveringButton').remove()", 2500);
+    });
+    function clickMe(element) {
+        element.innerHTML = "I was clicked";
+    }
+</script>
+
+</body>
+</html>

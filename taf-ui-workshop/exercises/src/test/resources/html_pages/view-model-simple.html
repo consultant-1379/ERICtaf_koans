@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAF UI Workshop: View Model</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div {
+            padding: 5px;
+        }
+        .form {
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Please open ViewModel2.java</h1>
+
+<div id="userForm" class="form">
+
+    <h1>What is your name?</h1>
+
+    <label for="userName">Name:</label>
+    <input id="userName" type="text"/>
+
+    <button id="submitButton" onclick="registerUser()">Submit</button>
+
+</div>
+
+<script language="JavaScript">
+    function registerUser() {
+        var userName = document.getElementById('userName').value;
+        var userForm = document.getElementById('userForm');
+        var parentNode = userForm.parentNode;
+        parentNode.removeChild(userForm);
+        parentNode.innerHTML = "<h1 class='notification'>Thank you, " + userName + "!</h1>";
+    }
+</script>
+
+</body>
+</html>

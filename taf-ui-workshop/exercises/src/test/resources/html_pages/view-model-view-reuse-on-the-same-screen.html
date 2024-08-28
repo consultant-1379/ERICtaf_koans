@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAF UI Workshop: View Model</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div {
+            padding: 5px;
+        }
+        .form {
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+        }
+        .fieldsGroup {
+            border: 1px;
+            padding: 10px;
+            margin: 10px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Please open ViewModel4ViewReuseOnTheSameScreen.java</h1>
+
+<div id="clientRegistrationForm" class="form">
+
+    <h1>Client registration</h1>
+
+    <div id="deliveryAddress" class="fieldsGroup">
+        <h3>Delivery Address</h3>
+        <p>
+            <label for="field1">City:</label>
+            <input type="text" id="field1" class="city" value=""/>
+        </p>
+        <p>
+            <label for="field2">Street:</label>
+            <input type="text" id="field2" class="street" value=""/>
+        </p>
+        <p>
+            <label for="field3">Zip:</label>
+            <input type="text" id="field3" class="zip" value=""/>
+        </p>
+    </div>
+
+    <div id="billingAddress" class="fieldsGroup">
+        <h3>Billing Address</h3>
+        <p>
+            <label for="field11">City:</label>
+            <input type="text" id="field11" class="city" value=""/>
+        </p>
+        <p>
+            <label for="field22">Street:</label>
+            <input type="text" id="field22" class="street" value=""/>
+        </p>
+        <p>
+            <label for="field33">Zip:</label>
+            <input type="text" id="field33" class="zip" value=""/>
+        </p>
+    </div>
+
+    <button id="registerClientButton" onclick="registerClient()">Register</button>
+
+    <div id="notificationsContainer">
+    </div>
+
+</div>
+
+<script language="JavaScript">
+    function registerClient() {
+        if (isValid()) {
+            var element = document.getElementById('clientRegistrationForm');
+            var parentNode = element.parentNode;
+            parentNode.removeChild(element);
+            parentNode.innerHTML = "<h1 class='notification'>Registration completed</h1>";
+        } else {
+            // validation error messages simulation
+            var element = document.getElementById('notificationsContainer');
+            element.innerHTML = "<h1 class='notification'>Street should not be empty</h1>" +
+                    "<h1 class='notification'>City should not be empty</h1>";
+        }
+    }
+    function isValid() {
+        // validation simulation
+        var city1 = document.getElementById('field11').value;
+        var city2 = document.getElementById('field1').value;
+        return city1 && city2;
+    }
+</script>
+
+</body>
+</html>

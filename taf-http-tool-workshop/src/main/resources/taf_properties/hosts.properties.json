@@ -1,0 +1,29 @@
+[
+    {
+        "hostname": "taf.lmera.ericsson.se",
+        "ip": "taf.lmera.ericsson.se",
+        "type": "http",
+        "ports": {"http": 80}
+    },
+
+    {
+        "hostname": "www.ericsson.com",
+        "ip": "www.ericsson.com",
+        "type": "http",
+        "ports": {"http": 80, "https": 443}
+    },
+
+    {
+        "hostname": "httpbin.org",
+        "ip": "54.175.219.8",
+        "type": "http",
+        "ports": {"http": 80, "https": 443}
+    },
+
+    {
+        "hostname": "confluence-oss.lmera.ericsson.se",
+        "ip": "150.132.44.59",
+        "type": "http",
+        "ports": {"http": 80, "https": 443}
+    }
+]

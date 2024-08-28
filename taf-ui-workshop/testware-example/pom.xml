@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>taf-ui-workshop</artifactId>
+        <version>1.0.217-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>testware-example</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <test.source>${project.basedir}/src/test/java</test.source>
+        <test.output>${project.build.directory}</test.output>
+    </properties>
+
+
+    <modules>
+        <module>testware</module>
+        <module>operators</module>
+        <module>test-pom</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.ericsson.cifwk.taf</groupId>
+                <artifactId>taf-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

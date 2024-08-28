@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DataTest">
+
+ <test name="DataTest">
+  <classes>
+   <class
+    name="com.ericsson.cifwk.taf.koans.dataDriven.test.cases.ProvideDataInCSVForTestCase" />
+   <class
+    name="com.ericsson.cifwk.taf.koans.dataDriven.test.cases.ProvideDataInCSVForAllTestCases" />
+   <class
+    name="com.ericsson.cifwk.taf.koans.dataDriven.test.cases.ProvideDataInCSVViaURL" />
+   <class
+    name="com.ericsson.cifwk.taf.koans.dataDriven.test.cases.CreateDataSourceMethod" />
+  </classes>
+ </test>
+
+</suite>

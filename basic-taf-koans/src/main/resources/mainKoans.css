@@ -1,0 +1,159 @@
+/*
+	Question2Answer (c) Gideon Greenspan
+
+	http://www.question2answer.org/
+
+	
+	File: qa-theme/Candy/qa-styles.css
+	Version: See define()s at top of qa-include/qa-base.php
+	Description: CSS file for included Candy theme
+
+
+	This program is free software; you can redistribute it and/or
+	modify it under the terms of the GNU General Public License
+	as published by the Free Software Foundation; either version 2
+	of the License, or (at your option) any later version.
+	
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	More about this license: http://www.question2answer.org/license.php
+*/
+
+/*
+	Theme URI: 
+	Theme Version: 1.5
+	Theme Date: 2012-09-11
+	Theme Author: Question2Answer
+	Theme Author URI: http://www.question2answer.org/
+	Theme License: GPLv2
+	Theme Update Check URI: 
+*/
+
+
+/* General page layout */
+
+/*body {background:#bddb62 url(page-bg.png) repeat-x left top; margin:0; padding:0; text-align:center;}*/
+body { margin:0; padding:0; text-align:center;}
+body,td,input,textarea {font-ize:12px; font-family: "Trebuchet MS", Tahoma, Arial, Helvetica, sans-serif;}
+a:link,a:active,a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+input {outline:none; }
+p {margin-top:0;}
+
+.qa-notice {background:#ebc5e2 url(suggest-bg.png) repeat-x left bottom; border-bottom:1px solid #597700; color:#5c0045; font-size:14px; padding:12px 32px; font-weight:bold; position:relative;}
+.qa-notice-close-button {font-family:"Arial Black"; color:#5c0045; font-size:18px; background:none; cursor:pointer; position:absolute; height:24px; border:none; top:4px; right:6px}
+.qa-body-wrapper {background:#fff; width:980px; margin:0 auto; margin-top:-1px; text-align:left;}
+
+/* Ajax loading spinner */
+
+.qa-waiting {background:url(spinner-icon-14x14.gif) no-repeat center; width:14px; height:14px; display:inline-block; font-size:0; margin:0px 8px 0px 4px; vertical-align:middle;}
+.qa-favoriting .qa-waiting {position:absolute; padding:18px 0;}
+.qa-a-selection .qa-waiting {position:absolute; padding:18px 0; margin-left:-32px;}
+
+/* Clearing classes */
+
+.qa-nav-main-clear,
+.qa-nav-sub-clear,
+.qa-q-item-clear,
+.qa-q-view-clear,
+.qa-a-item-clear,
+.qa-c-item-clear,
+.qa-footer-clear,
+.qa-page-links-clear {clear:both;}
+
+/* Headings */
+
+h1 {margin:1em 0 0.5em 0; color:#c659ab; font-size:28px; font-weight:bold;}
+h2 {font-size:22px; color:#c659ab; padding-top:12px; clear:both;}
+
+.qa-favoriting {float:right; padding-right:16px;}
+
+.qa-favorite-button,.qa-unfavorite-button {background:url(select-star.gif) no-repeat; border:0; height:49px; width:50px;}
+	.qa-favorite-button {background-position: 0 -49px;}
+	.qa-favorite-button:hover {background-position: 0 0px;}
+	.qa-unfavorite-button {background-position: 0 -98px;}
+	.qa-unfavorite-button:hover {background-position: 0 0px;}
+
+.qa-error {background:#fed8d8 url(error-bg.png) repeat-x left top; border:2px solid #cc0000; color:#cc0000; font-size:18px; padding:.5em; margin:1em 0; }
+	.qa-error a {color:#900; text-decoration:underline;}
+	.qa-error a:hover {color:#f00;}
+
+/* Page sections */
+
+.qa-header{position:relative;width:1905px;height:70px; margin-left: -465px; solid #0066b3;background-image:-moz-linear-gradient(top, #ffffff 0%, #f4f4f4 100%);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f4f4f4));background-image:-webkit-linear-gradient(top, #ffffff 0%, #f4f4f4 100%);background-image:-ms-linear-gradient(top, #ffffff 0%, #f4f4f4 100%);background-image:linear-gradient(top bottom, #ffffff 0%, #f4f4f4 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF4F4F4', GradientType=0);-webkit-box-shadow:0 1px 2px #D2D2D2;-moz-box-shadow:0 1px 2px #D2D2D2;-ms-box-shadow:0 1px 2px #D2D2D2;box-shadow:0 1px 2px #D2D2D2;}.qa-header::before{content:"";position:absolute;width:100%;height:5px;font-size:0;top:-12px;left:0;background:#0066b3;background:-o-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);background:-moz-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);background:-webkit-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);background:-ms-linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);background:-webkit-gradient(linear, left top, right top, color-stop(0.1, #a2c517), color-stop(0.3, #009046), color-stop(0.5, #0082b6), color-stop(0.75, #151f77), color-stop(1, #db0050));background:linear-gradient(left, #a2c517 10%, #009046 30%, #0082b6 50%, #151f77 75%, #db0050 100%);}
+.qa-header-logo{height:36px;position:absolute;top:0;bottom:0;left:0;background:url('qa-theme/TAF/logo.png') no-repeat center center transparent;width:20px;background-size:20px 20px;padding:0 10px;}
+.qa-header-topMenuName{display:inline-block;padding:0 5px 0 40px;margin:0;font-size:1.6rem;line-height:36px;color:#00285e;}
+.qa-header-topMenu{position:absolute;top:0;bottom:0;left:50px;list-style:none;height:40px;margin:0;padding:0;}
+.qa-header-topMenu li{display:inline-block;}
+.qa-header-topMenu a{padding:0 5px 0 15px;margin:0;font-size:1.6em;line-height:40px;color:#58585a;cursor:pointer;text-decoration:none;}
+.qa-header-topMenu a:hover{color:#0066B3;}
+.qa-header-rightButton{float:right;display:inline-block;line-height:40px;vertical-align:middle;}.qa-header-rightButton a{color:#0066B3;font-size:1.3rem;padding:0 18px 0 18px;background-color:transparent;background-repeat:no-repeat;background-position:18px center;border-left:solid 1px #D2D2D2;display:block;}.qa-header-rightButton a:hover{text-decoration:underline;}
+.qa-header-rightButton:hover{background-image:-moz-linear-gradient(top, #f2f2f2 0%, #e8e8e8 100%);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #e8e8e8));background-image:-webkit-linear-gradient(top, #f2f2f2 0%, #e8e8e8 100%);background-image:-ms-linear-gradient(top, #f2f2f2 0%, #e8e8e8 100%);background-image:linear-gradient(top bottom, #f2f2f2 0%, #e8e8e8 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF2F2F2', endColorstr='#FFE8E8E8', GradientType=0);}
+@media screen and (max-width:640px){.qa-header-topBar-rightButton a{padding-left:34px;text-indent:-9999px;width:0;}}
+
+
+/*.qa-sidepanel {float:right; width:176px; }*/
+/*.qa-sidebar {padding:12px; font-size:14px; background:#fabb00 url(sidebar-bg.png) repeat-y right top; border: 2px solid #6a1b56; border-right:none; margin:18px 0;}*/
+.qa-sidebar {padding:20px; font-size:15px; margin:20px 0; border-bottom: solid 1px #CCCCD5;}
+.koans1 {width: 980px; height: 65px; padding:20px; font-size:15px; margin:20px 0; border-bottom: solid 1px #CCCCD5;}
+.qa-feed {background:url(feed-icon-14x14.png) no-repeat left 1px; padding-left:20px; padding-bottom: 10px; margin:18px 12px 18px 0; border-bottom: solid 1px #CCCCD5;}
+.qa-feed-link {font-size:12px; color:#666;}
+qa-main {padding-left:20px; float:left; width:965px; margin-bottom:24px; clear:left; overflow:hidden;}
+.qa-main-hidden h1 {color:#999;}
+/*.qa-footer {clear:both; background:#3b7c1f url(footer-bg.png) repeat-x left top; color:#FFF; font-size:10px; padding:10px;}*/
+.qa-footer {clear:both; background:#ffff url(footer-bg.png) repeat-x left top; color:#FFF; font-size:10px; padding:10px;}
+* html .qa-footer {padding-top:6px;} /* IE6 */
+
+
+/* Header sections */
+
+.qa-logo { float:left; padding-left:52px; padding-top:28px; font-size:48px; font-weight:bold; color:#00285e; background: url("logo.png") 12.8cm 100% no-repeat; background-size: 28px 30px;}
+.qa-logo-link, .qa-logo-link:hover {margin-left: 470px;font-size:28px; font-weight:bold;color:#0066b3; font-family:EricssonCapitalTT;}
+
+
+.koan2 {font-weight: bold; font-size: 15px;}
+.inputTextName{padding: 10px; font-size: 15px;}
+.inputTextSignum{padding: 10px; font-size: 15px;}
+
+/* Question list */
+
+.qa-q-list-item {background:#fff; margin-bottom:10px; padding:10px 0 15px 10px; zoom:1; border-bottom: solid 1px #CCCCD5;} /* zoom for IE, padding for early FF */
+.qa-q-item-stats {float:left;}
+.koans-main {width:900px; float:left; padding-left:10px; font-size:10px}
+.qa-q-item-title {color:#000; font-size:20px;}
+	.qa-q-item-title a {color:#FF9933; font-size: 15px; font-weight: 700}
+.qa-q-item-content {font-size:10px; margin-top:8px; max-height:80px; overflow-y:auto; padding:4px; border:1px solid #ccc;}
+.qa-q-item-avatar {display:inline-block; vertical-align:middle; margin-top:8px; margin-right:2px;}
+/*.qa-q-item-meta {display:inline-block; vertical-align:middle; margin-top:8px; font-size:14px;font:10px;}*/
+.qa-q-item-meta {display:inline-block; vertical-align:middle; margin-top:8px; }
+.qa-q-item-when-data {font-weight:bold;}
+.qa-q-item-who-title {font-size:80%; font-weight:bold; color:#6b0000;}
+.qa-q-item-points-data {font-weight:bold;}
+.qa-q-item-flags {color:#f00; font-weight:bold; padding-left:4px;}
+.qa-q-item-tags {margin-top:12px;}
+.qa-q-item-tag-list {list-style:none; margin:0; padding:0;}
+.qa-q-item-tag-item {display:inline;}
+.qa-q-item-buttons {text-align:right;}
+
+/*.qa-suggest-next {background:#ebc5e2 url(suggest-bg.png) repeat-x left bottom; border:1px solid #6a1b56; color:#c659ab; font-size:14px; padding:8px; text-align:center; clear:both;}*/
+.qa-suggest-next {background:#fff; font-size:14px; padding:8px; text-align:center; clear:both;}
+	.qa-suggest-next a {color:#5c0045; font-style:italic; text-decoration:underline;}
+	.qa-suggest-next a:hover {background:#5c0045; color:#FFF; text-decoration:underline;}
+
+
+/* Footer parts */
+
+.qa-nav-footer-list {float:left; list-style-type:none; padding:0; margin:0;}
+.qa-nav-footer-item {float:left; margin-right:12px;}
+.qa-nav-footer-link {color:#FFF; text-decoration:underline !important;}
+	.qa-nav-footer-link:hover {color:#f5d495;}
+.qa-attribution {float:right;}
+	.qa-attribution a {color:#FFF; text-decoration:underline; !important;}
+	.qa-attribution a:hover {color:#f5d495;}
+
+
+
+

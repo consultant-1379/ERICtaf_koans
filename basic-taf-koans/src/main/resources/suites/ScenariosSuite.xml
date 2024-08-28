@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ScenariosTest">
+
+ <test name="ScenariosTest">
+  <classes>
+   <class
+    name="com.ericsson.cifwk.taf.koans.scenarios.test.cases.CreateFlow" />
+   <class
+           name="com.ericsson.cifwk.taf.koans.scenarios.test.cases.CreateScenario" />
+   <class
+           name="com.ericsson.cifwk.taf.koans.scenarios.test.cases.DataSources" />
+   <class
+           name="com.ericsson.cifwk.taf.koans.scenarios.test.cases.VUsers" />
+  </classes>
+ </test>
+
+</suite>

@@ -1,0 +1,4 @@
+username,password,roles
+admin,Shroot12,ADMINISTRATOR
+user1,Shroot12,OPERATOR
+user2,Shroot12,OPERATOR

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAF UI Workshop: View Model</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div {
+            padding: 5px;
+        }
+        .form {
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+        }
+        .fieldsGroup {
+            border: 1px;
+            padding: 10px;
+            margin: 10px;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Please open ViewModel3MultipleViews.java</h1>
+
+<div id="clientRegistrationForm" class="form">
+
+    <h1>Client registration</h1>
+
+    <div id="personalDataSection" class="fieldsGroup">
+        <h3>Personal data</h3>
+        <p>
+        <label for="firstName">First name:</label>
+        <input type="text" id="firstName" name="firstName" class="credential"/>
+        </p>
+        <p>
+        <label for="lastName">Last name:</label>
+        <input type="text" id="lastName" name="lastName" class="credential"/>
+        </p>
+    </div>
+
+    <div id="deliveryAddress" class="fieldsGroup">
+        <h3>Address</h3>
+        <p>
+            <label for="city">City:</label>
+            <input type="text" id="city" class="city" value=""/>
+        </p>
+        <p>
+            <label for="street">Street:</label>
+            <input type="text" id="street" class="street" value=""/>
+        </p>
+        <p>
+            <label for="zip">Zip:</label>
+            <input type="text" id="zip" class="zip" value=""/>
+        </p>
+    </div>
+
+    <button id="registerClientButton" onclick="registerClient()">Register</button>
+
+</div>
+
+<script language="JavaScript">
+    function registerClient() {
+        var element = document.getElementById('clientRegistrationForm');
+        var parentNode = element.parentNode;
+        parentNode.removeChild(element);
+        parentNode.innerHTML = "<h1 class='notification'>Registration completed</h1>";
+    }
+</script>
+
+</body>
+</html>

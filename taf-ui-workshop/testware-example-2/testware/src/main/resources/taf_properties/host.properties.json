@@ -1,0 +1,23 @@
+[
+  {
+    "hostname": "selenium_grid",
+    "ip": "141.137.235.242",
+    "type": "SELENIUM_GRID",
+    "ports": {"http": 4444}
+  },
+  {
+    "hostname": "uiSdkApp",
+    "ip": "atvts3003.athtem.eei.ericsson.se",
+    "type": "UNKNOWN",
+    "users": [
+      {
+        "username": "taf",
+        "password": "taf",
+        "type": "admin"
+      }
+    ],
+    "ports": {
+      "http": 8882
+    }
+  }
+]

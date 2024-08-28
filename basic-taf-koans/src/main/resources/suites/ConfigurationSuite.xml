@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ConfigurationTest">
+
+ <test name="ConfigurationTest">
+  <classes>
+   <class
+    name="com.ericsson.cifwk.taf.koans.configuration.test.cases.RetrieveHostInformation" />
+   <class
+    name="com.ericsson.cifwk.taf.koans.configuration.test.cases.UsingSystemProperties" />
+  </classes>
+ </test>
+
+</suite>

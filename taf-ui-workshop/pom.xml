@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>ERICtaf_koans</artifactId>
+        <version>1.0.217-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>taf-ui-workshop</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>exercises</module>
+        <module>selenium-example</module>
+        <module>testware-example</module>
+        <module>testware-example-2</module>
+    </modules>
+
+    <profiles>
+        <profile>
+            <id>x32</id>
+            <activation>
+                <property>
+                    <name>sun.arch.data.model</name>
+                    <value>32</value>
+                </property>
+            </activation>
+            <properties>
+                <os-bits>x32</os-bits>
+            </properties>
+        </profile>
+        <profile>
+            <id>x64</id>
+            <activation>
+                <property>
+                    <name>sun.arch.data.model</name>
+                    <value>64</value>
+                </property>
+            </activation>
+            <properties>
+                <os-bits>x64</os-bits>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.9</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

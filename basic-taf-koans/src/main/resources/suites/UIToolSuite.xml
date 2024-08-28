@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="UIToolTest">
+
+ <test name="UIToolTest">
+  <classes>
+   <class
+    name="com.ericsson.cifwk.taf.koans.uitools.test.cases.UiToolsTestCases" />
+  </classes>
+ </test>
+
+</suite>

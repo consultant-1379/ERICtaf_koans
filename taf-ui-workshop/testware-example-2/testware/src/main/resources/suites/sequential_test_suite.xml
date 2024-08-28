@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sequential Acceptance Tests" parallel="false">
+    <test name="Usage Scenarios">
+        <classes>
+            <class name="com.ericsson.taf.workshop.parallel.LoginTest"/>
+            <class name="com.ericsson.taf.workshop.parallel.MemberTableTest"/>
+        </classes>
+    </test>
+</suite>

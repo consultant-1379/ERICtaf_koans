@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>TAF Koans</title>
+<link rel="stylesheet" type="text/css" href="mainKoans.css">
+<link rel="stylesheet" type="text/css" href="moreKoans.css">
+<script>
+function koan3() {
+    document.getElementById("koanText3").innerHTML = "<br><h3>You have pressed the button<h3>";
+     $("#showDiv").hide;
+    
+}
+function koan4() {
+    var name = document.getElementById("name").value;
+    var signum = document.getElementById("signum").value;
+    if(name == "" | signum == ""){
+        document.getElementById("koanText4").innerHTML = "<h3 style=\"color:red\">Please fill in both name and signum</h3>";
+    }
+    if(name != "" && signum != ""){
+    document.getElementById("koanText4").innerHTML = "<br><span><h3><b>Name:</b> " + document.getElementById("name").value  +"</h3><h3><b>Signum:</b> " + document.getElementById("signum").value  +"</h3></span>";
+    }
+}
+  
+function koan6() {
+    document.getElementById("koanText6").innerHTML = "<br><h3><b>Name:</b><input type=\"text\" name=\"Koan6Name\" id=\"Koan6Name\"></h3><button onclick=\"koan6Validation()\" id=\"koanButton6\">Submit</button>";
+}  
+    
+function koan6Validation() {
+    var name = document.getElementById("Koan6Name").value; 
+    if(name == ""){
+        document.getElementById("koanText6Error").innerHTML = "<h3 style=\"color:red\">Please fill in your name</h3>";
+    }
+    if(name != ""){
+        document.getElementById("koanText6").innerHTML = "<br><h3><b>Name:</b> " + document.getElementById("Koan6Name").value  +"</h3>"; 
+        document.getElementById("koanText6Error").style.display = 'none';
+    }
+    
+    
+}
+</script>
+</head>
+
+<body class="qa-template-qa qa-body-js-off">
+
+	<div class="qa-body-wrapper">
+		<div class="qa-header">
+            <div class="qa-logo">
+				<a href="./index.php" class="qa-logo-link">TAF Koans</a>
+			</div>
+			<div class="qa-nav-main">
+				<div class="qa-nav-main-clear"></div>
+			</div>
+			<div class="qa-header-clear"></div>
+		</div>
+
+		<div class="qa-sidepanel">
+			<div class="qa-sidebar">Welcome to TAF Koans web page, where
+				you use the koans to click on buttons and enter text into textbox's
+				using id's, css and xpath.</div>
+		</div>
+		<div class="qa-part-q-list">
+			<div class="qa-q-list">
+				<div class="qa-q-list-item">
+					<div class="koans-main">
+						<h1>Koan 1</h1>
+						<h3>
+							- <b>Aim: </b>The object of koan 1 is to teach the user how to
+							get the generic view model by using XPath.
+						</h3>
+						<h3>
+							- <b>To Do: </b>User needs to update code to get the generic view
+							model.
+						</h3>
+						<button>Sample Button</button>
+					</div>
+					<div class="qa-q-item-clear"></div>
+				</div>
+
+				<div class="qa-q-list-item">
+					<div class="koans-main">
+						<h1>Koan 2</h1>
+						<h3>
+							- <b>Aim: </b>The object of koan 2 is to teach the user how to
+							get UI Component using CSS.
+						</h3>
+						<h3>
+							- <b>To Do: </b>User needs to update code to get UI component.
+						</h3>
+						<br> <span class="koan2">This is a span for Koan 2</span>
+					</div>
+					<div class="qa-q-item-clear"></div>
+				</div>
+
+				<div class="qa-q-list-item">
+					<div class="koans-main">
+						<h1>Koan 3</h1>
+						<h3>
+							- <b>Aim: </b>The object of koan 3 is to teach the user how to
+							create the UI button element and mapping with web page element.
+						</h3>
+						<h3>
+							- <b>To Do: </b>User needs to update code to ceate the UI element
+							then click it.
+						</h3>
+						<button onclick="koan3()" id="koanButton3">Click Here</button>
+						<span id="koanText3"></span>
+					</div>
+					<div class="qa-q-item-clear"></div>
+				</div>
+
+				<div class="qa-q-list-item">
+					<div class="koans-main">
+						<h1>Koan 4</h1>
+						<h3>
+							- <b>Aim: </b>The object of koan 4 is to teach the user how to
+							retrieve the UI textbox element and mapping with web page
+							element.
+						</h3>
+						<h3>
+							- <b>To Do: </b>User needs to update code to ceate the UI element
+							then fill in the text into such textbox.
+						</h3>
+						<span class="inputTextName"> Name: <input type="text"
+							name="name" id="name">
+						</span> <span class="inputTextSignum"> Signum: <input type="text"
+							name="signum" id="signum">
+						</span>
+						<button onclick="koan4()" id="koanButton4">Submit</button>
+						<span id="koanText4"></span> <span id="koan4Error"></span>
+					</div>
+					<div class="qa-q-item-clear"></div>
+				</div>
+
+				<div class="qa-q-list-item">
+					<div class="koans-main">
+						<h1>Koan 5</h1>
+						<h3>
+							- <b>Aim: </b>The object of koan 5 is to teach the user how to
+							load the specified ViewModel by BrowserTab instance.
+						</h3>
+						<h3>
+							- <b>To Do: </b>User needs to update code to get the expected UI
+							view model.
+						</h3>
+						<span class="inputTextName"> Name: <input type="text"
+							name="fullname" id="fullname">
+						</span> 
+					</div>
+					<div class="qa-q-item-clear"></div>
+				</div>
+
+				<div class="qa-q-list-item">
+					<div class="koans-main">
+						<h1>Koan 6</h1>
+						<h3>
+							- <b>Aim: </b>The object of koan 6 is to teach the user how to
+							map the web page elements in UI module.
+						</h3>
+						<h3>
+							- <b>To Do: </b>User needs to update code to implement mapping
+							between UI module and web page.
+						</h3>
+						<span class="inputTextName"> Name: <input type="text"
+							name="Koan6Name" id="Koan6Name">
+						<button onclick="koan6Validation()" id="koanButton6">Submit</button>
+					
+						<span id="koanText6"></span> <span id="koanText6Error"></span>
+					</div>
+					<div class="qa-q-item-clear"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="qa-suggest-next">
+			To see more information on TAF UI, click for the <a
+				href="http://taf.lmera.ericsson.se/taflanding/userdocs/Latest/index.html#_taf_ui_sdk"
+				target="_blank">TAF User Documentation</a>.
+		</div>
+	</div>
+</body>
+</html>

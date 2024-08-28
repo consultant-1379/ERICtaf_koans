@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAF UI Workshop: Static Lists</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+<script src="jquery-2.2.3.min.js"></script>
+
+
+<h1>Target List:</h1>
+<div>
+    <table id="itemsContainer">
+        <tr id="initialPageLoading"><td>Loading...</td></tr>
+    </table>
+</div>
+<button id="updateListButton" onclick="updateList();">Update list</button>
+<button id="updateListItemButton" onclick="updateListItem();">Update list item</button>
+
+<script language="JavaScript">
+    $(document).ready(function() {
+        setTimeout("itemsLoaded()", 3000);
+    });
+
+    function itemsLoaded() {
+        $("#initialPageLoading").remove();
+        [1,2,3,4,5,6,7,8,9,10].forEach(addItem);
+    }
+
+    function addItem(item) {
+        $("#itemsContainer").append("<tr class=\"item\"><td>item " + item + "</td></tr>");
+    }
+
+    function updateList() {
+        [11,12,13,14,15,16,17,18,19,20].forEach(addItem);
+    }
+
+    function updateListItem() {
+        $("#itemsContainer tr td").append(" updated");
+    }
+</script>
+
+</body>
+</html>

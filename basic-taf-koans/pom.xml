@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>ERICtaf_koans</artifactId>
+        <version>1.0.217-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>basic-taf-koans</artifactId>
+    <packaging>jar</packaging>
+
+    <scm>
+        <developerConnection>${ericsson.scm.url}/${project.artifactId}</developerConnection>
+        <connection>${ericsson.scm.url}/${project.artifactId}</connection>
+        <tag>ERICtaf_koans-1.0.1</tag>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sandwich</groupId>
+            <artifactId>koans</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>http-tool</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>taf-scenario</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>testng-runner</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>all-taf-sdk</artifactId>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

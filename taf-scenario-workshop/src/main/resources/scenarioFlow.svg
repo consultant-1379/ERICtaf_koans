@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="600" version="1.1" viewBox="0 0 320 600" width="320">
+<script type="text/javascript"><![CDATA[function showTooltip(id) {
+    var tooltips = document.getElementsByClassName('tooltip');
+    for (var i = 0; i < tooltips.length; i++) {
+        tooltips[i].style.visibility = 'hidden';
+    }
+    show('tooltip'+id);
+}
+
+function show(id) {
+    document.getElementById(id).style.visibility = 'visible';
+}
+
+function hide(id) {
+    document.getElementById(id).style.visibility = 'hidden';
+}]]></script>
+<style type="text/css"><![CDATA[text {
+    pointer-events: none;
+}
+
+.tooltip {
+    visibility: hidden;
+}
+
+.tooltip body {
+    background: #FCF0AD;
+    width: 300px;
+    height: 500px;
+    overflow: auto;
+    font-size: 12px;
+    padding: 10px 0 0 10px;
+}
+
+.tooltip .close {
+    position: fixed;
+    left: 285px;
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+    background: #ccc;
+    padding: 1px 4px;
+    display: block;
+    border: 1px solid black;
+}]]></style>
+<a xlink:href="javascript:showTooltip('1')" xlink:title="Click to see details...">
+<ellipse cx="115" cy="17" fill="#188079" rx="45" ry="15" stroke="none" stroke-width="1.0"/>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="114" y="15">Scenario started:</tspan>
+<tspan x="114" y="26">scenario</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('2')" xlink:title="Click to see details...">
+<g>
+<path d=" M 30 93.0 C 30 85.0 100 85.0 100 93.0 L 100 111.0 C 100 119.0 30 119.0 30 111.0 Z" fill="#4fb889" stroke="none" stroke-width="1.0"/>
+<path d="M 30 93.0 C 30 99.0 100 99.0 100 93.0" fill="none" stroke="none" stroke-width="1.0"/>
+</g>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="65" y="99">Flow started:</tspan>
+<tspan x="65" y="110">flow1</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('3')" xlink:title="Click to see details...">
+<rect fill="#ffcc6e" height="20" stroke="none" stroke-width="1.0" width="100" x="0" y="169"/>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="50" y="182">TestSteps.flow1Ts</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('4')" xlink:title="Click to see details...">
+<g>
+<path d=" M 130 93.0 C 130 85.0 200 85.0 200 93.0 L 200 111.0 C 200 119.0 130 119.0 130 111.0 Z" fill="#4fb889" stroke="none" stroke-width="1.0"/>
+<path d="M 130 93.0 C 130 99.0 200 99.0 200 93.0" fill="none" stroke="none" stroke-width="1.0"/>
+</g>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="165" y="99">Flow started:</tspan>
+<tspan x="165" y="110">flow1</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('5')" xlink:title="Click to see details...">
+<rect fill="#ffcc6e" height="20" stroke="none" stroke-width="1.0" width="100" x="130" y="169"/>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="180" y="182">TestSteps.flow1Ts</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('6')" xlink:title="Click to see details...">
+<g>
+<path d=" M 80 248.0 C 80 240.0 150 240.0 150 248.0 L 150 266.0 C 150 274.0 80 274.0 80 266.0 Z" fill="#baffe0" stroke="none" stroke-width="1.0"/>
+<path d="M 80 248.0 C 80 254.0 150 254.0 150 248.0" fill="none" stroke="none" stroke-width="1.0"/>
+</g>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="115" y="254">Flow ended:</tspan>
+<tspan x="115" y="265">flow1</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('7')" xlink:title="Click to see details...">
+<g>
+<path d=" M 30 332.0 C 30 324.0 100 324.0 100 332.0 L 100 350.0 C 100 358.0 30 358.0 30 350.0 Z" fill="#4fb889" stroke="none" stroke-width="1.0"/>
+<path d="M 30 332.0 C 30 338.0 100 338.0 100 332.0" fill="none" stroke="none" stroke-width="1.0"/>
+</g>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="65" y="339">Flow started:</tspan>
+<tspan x="65" y="350">flow2</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('8')" xlink:title="Click to see details...">
+<g>
+<path d=" M 130 332.0 C 130 324.0 200 324.0 200 332.0 L 200 350.0 C 200 358.0 130 358.0 130 350.0 Z" fill="#4fb889" stroke="none" stroke-width="1.0"/>
+<path d="M 130 332.0 C 130 338.0 200 338.0 200 332.0" fill="none" stroke="none" stroke-width="1.0"/>
+</g>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="165" y="339">Flow started:</tspan>
+<tspan x="165" y="350">flow3</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('9')" xlink:title="Click to see details...">
+<rect fill="#ffcc6e" height="20" stroke="none" stroke-width="1.0" width="100" x="0" y="409"/>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="50" y="422">TestSteps.flow2Ts</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('10')" xlink:title="Click to see details...">
+<rect fill="#ffcc6e" height="20" stroke="none" stroke-width="1.0" width="100" x="130" y="409"/>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="180" y="422">TestSteps.flow3Ts</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('11')" xlink:title="Click to see details...">
+<g>
+<path d=" M 75 487.0 C 75 479.0 155 479.0 155 487.0 L 155 505.0 C 155 513.0 75 513.0 75 505.0 Z" fill="#baffe0" stroke="none" stroke-width="1.0"/>
+<path d="M 75 487.0 C 75 493.0 155 493.0 155 487.0" fill="none" stroke="none" stroke-width="1.0"/>
+</g>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="115" y="494">Parallel ended:</tspan>
+<tspan x="115" y="505">flow2, flow3</tspan>
+</text>
+<a xlink:href="javascript:showTooltip('12')" xlink:title="Click to see details...">
+<ellipse cx="115" cy="581" fill="#188079" rx="45" ry="15" stroke="none" stroke-width="1.0"/>
+</a>
+<text fill="black" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="114" y="579">Scenario finished:</tspan>
+<tspan x="114" y="590">scenario</tspan>
+</text>
+<g>
+<path d="M 65.0 101.75390625 L 62.0 95.75390625 L 65.0 97.25390625 L 68.0 95.75390625 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 114.7188855387759 17.831459571773202 L 95.0 46.8359375 L 65.0 72.8359375 L 65.0 102.25390625" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<text fill="#446299" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="82" y="60">VUser 1</tspan>
+</text>
+<g>
+<path d="M 50.0 179.171875 L 47.0 173.171875 L 50.0 174.671875 L 53.0 173.171875 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 65.0 102.75390625 L 65.0 131.671875 L 50.0 157.671875 L 50.0 179.671875" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<g>
+<path d="M 165.0 101.75390625 L 162.0 95.75390625 L 165.0 97.25390625 L 168.0 95.75390625 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 115.2811144612241 17.831459571773202 L 135.0 46.8359375 L 165.0 72.8359375 L 165.0 102.25390625" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<text fill="#446299" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="147" y="60">VUser 2</tspan>
+</text>
+<g>
+<path d="M 180.0 179.171875 L 177.0 173.171875 L 180.0 174.671875 L 183.0 173.171875 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 165.0 102.75390625 L 165.0 131.671875 L 180.0 157.671875 L 180.0 179.671875" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<g>
+<path d="M 114.77287497957398 256.6444066331176 L 109.37475203316757 252.66191135308523 L 112.72874979573984 252.63547258117626 L 114.71999743575606 249.93641110797304 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 50.0 180.171875 L 50.0 201.671875 L 100.0 227.671875 L 115.0 257.08984375" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<g>
+<path d="M 115.22712502042602 256.6444066331176 L 115.28000256424394 249.93641110797304 L 117.27125020426016 252.63547258117626 L 120.62524796683243 252.66191135308523 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 180.0 180.171875 L 180.0 201.671875 L 130.0 227.671875 L 115.0 257.08984375" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<g>
+<path d="M 65.0 341.42578125 L 62.0 335.42578125 L 65.0 336.92578125 L 68.0 335.42578125 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 114.77287497957398 257.5352808668824 L 100.0 286.5078125 L 65.0 312.5078125 L 65.0 341.92578125" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<text fill="#446299" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="83" y="301">VUser 3</tspan>
+</text>
+<g>
+<path d="M 165.0 341.42578125 L 162.0 335.42578125 L 165.0 336.92578125 L 168.0 335.42578125 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 115.22712502042602 257.5352808668824 L 130.0 286.5078125 L 165.0 312.5078125 L 165.0 341.92578125" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<text fill="#446299" font-decoration="none" font-family="Arial,Helvetica" font-size="11" font-weight="normal" text-anchor="middle">
+<tspan x="146" y="301">VUser 4</tspan>
+</text>
+<g>
+<path d="M 50.0 418.84375 L 47.0 412.84375 L 50.0 414.34375 L 53.0 412.84375 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 65.0 342.42578125 L 65.0 371.34375 L 50.0 397.34375 L 50.0 419.34375" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<g>
+<path d="M 180.0 418.84375 L 177.0 412.84375 L 180.0 414.34375 L 183.0 412.84375 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 165.0 342.42578125 L 165.0 371.34375 L 180.0 397.34375 L 180.0 419.34375" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<g>
+<path d="M 114.74437344031625 496.33200365603165 L 109.098564160301 492.70918188651365 L 112.4437344031625 492.4645678103163 L 114.25514528792151 489.6416631703087 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 50.0 419.84375 L 50.0 441.34375 L 97.5 467.34375 L 115.0 496.76171875" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<g>
+<path d="M 115.25562655968375 496.33200365603165 L 115.74485471207849 489.6416631703087 L 117.5562655968375 492.4645678103163 L 120.901435839699 492.70918188651365 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 180.0 419.84375 L 180.0 441.34375 L 132.5 467.34375 L 115.0 496.76171875" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<g>
+<path d="M 115.0 581.09765625 L 112.0 575.09765625 L 115.0 576.59765625 L 118.0 575.09765625 z" fill="#6482B9" stroke="#6482B9" stroke-width="1.0"/>
+<path d="M 115.0 497.26171875 L 115.0 526.1796875 L 115.0 552.1796875 L 115.0 581.59765625" fill="none" stroke="#6482B9" stroke-width="1.0"/>
+</g>
+<switch>
+<foreignObject>
+<body xmlns="http://www.w3.org/1999/xhtml"/>
+</foreignObject>
+<text fill="red" x="10" y="30">Your browser does not support HTML as foreignObject. To view scenario details open this file in Firefox or Chrome</text>
+</switch>
+<foreignObject class="tooltip" height="520" id="tooltip1" width="320" x="0" y="2.41796875">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip1')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>Scenario started:
+scenario</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>RootNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.133</td>
+</tr>
+<tr>
+<td>
+<b>Duration:</b>
+</td>
+<td>00:00:00.031</td>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip2" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip2')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>Flow started:
+flow1</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>FlowNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.150</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Data Source</th>
+<th>Data Record</th>
+<th>Value</th>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip3" width="320" x="0.0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip3')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>TestSteps.flow1Ts</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>TestStepNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.151</td>
+</tr>
+<tr>
+<td>
+<b>Duration:</b>
+</td>
+<td>00:00:00.005</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Data Source</th>
+<th>Data Record</th>
+<th>Value</th>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip4" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip4')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>Flow started:
+flow1</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>FlowNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>2</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.151</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Data Source</th>
+<th>Data Record</th>
+<th>Value</th>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip5" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip5')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>TestSteps.flow1Ts</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>TestStepNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>2</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.151</td>
+</tr>
+<tr>
+<td>
+<b>Duration:</b>
+</td>
+<td>00:00:00.005</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Data Source</th>
+<th>Data Record</th>
+<th>Value</th>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip6" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip6')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>Flow ended:
+flow1</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>FlowEndedNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.160</td>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip7" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip7')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>Flow started:
+flow2</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>FlowNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>3</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.161</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Data Source</th>
+<th>Data Record</th>
+<th>Value</th>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip8" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip8')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>Flow started:
+flow3</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>FlowNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>4</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.161</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Data Source</th>
+<th>Data Record</th>
+<th>Value</th>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip9" width="320" x="0.0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip9')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>TestSteps.flow2Ts</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>TestStepNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>3</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.161</td>
+</tr>
+<tr>
+<td>
+<b>Duration:</b>
+</td>
+<td>00:00:00.000</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Data Source</th>
+<th>Data Record</th>
+<th>Value</th>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip10" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip10')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>TestSteps.flow3Ts</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>TestStepNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>4</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.161</td>
+</tr>
+<tr>
+<td>
+<b>Duration:</b>
+</td>
+<td>00:00:00.000</td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Data Source</th>
+<th>Data Record</th>
+<th>Value</th>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip11" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip11')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>Parallel ended:
+flow2, flow3</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>FlowEndedNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.162</td>
+</tr>
+</table>
+</body>
+</foreignObject>
+<foreignObject class="tooltip" height="520" id="tooltip12" width="320" x="0" y="80">
+<body xmlns="http://www.w3.org/1999/xhtml">
+<a class="close" href="javascript:hide('tooltip12')">x</a>
+<table>
+<tr>
+<td>
+<b>Name:</b>
+</td>
+<td>Scenario finished:
+scenario</td>
+</tr>
+<tr>
+<td>
+<b>Type:</b>
+</td>
+<td>ScenarioFinishedNode</td>
+</tr>
+<tr>
+<td>
+<b>VUser:</b>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<td>
+<b>Start Time:</b>
+</td>
+<td>2016-06-28 12:56:08.165</td>
+</tr>
+</table>
+</body>
+</foreignObject>
+</svg>

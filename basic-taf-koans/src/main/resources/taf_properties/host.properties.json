@@ -1,0 +1,36 @@
+[
+    {
+        "hostname": "ms1",
+        "ip": "0.0.0.1",
+        "type": "ms",
+        "users": [
+            {"username": "root", "password": "shroot", "type": "admin"}
+        ],
+        "ports": {"ssh": 22}
+    },
+    {
+        "hostname": "sc1",
+        "ip": "0.0.0.2",
+        "type": "sc1",
+        "users": [
+            {"username": "root", "password": "cobbler", "type": "admin"}
+        ],
+        "ports": {"ssh": 22},
+        "nodes": [
+            {
+                "hostname": "jboss1",
+                "ip": "0.0.0.2",
+                "type": "jboss",
+                "users": [
+                    {"username": "root", "password": "shroot", "type": "admin"},
+                    {"username": "guest", "password": "guestp", "type": "oper"}
+                ],
+                "ports": {
+                    "http": 8080, "rmi": 4447, "jmx": 9999, "jboss_management": 9999
+                }
+            }
+        ]
+
+    }
+ 
+]

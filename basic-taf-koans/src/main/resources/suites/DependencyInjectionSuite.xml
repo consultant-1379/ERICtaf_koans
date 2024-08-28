@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DependencyInjectionTest">
+
+ <test name="DependencyInjectionTest">
+  <classes>
+   <class
+    name="com.ericsson.cifwk.taf.koans.dependencyInjection.test.cases.InjectSingletonOperatorIntoTest" />
+   <class
+    name="com.ericsson.cifwk.taf.koans.dependencyInjection.test.cases.InjectMultipleOperatorsIntoOperator" />
+  </classes>
+ </test>
+
+</suite>

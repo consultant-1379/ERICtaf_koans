@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson</groupId>
+        <artifactId>master</artifactId>
+        <version>3.0</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.ericsson.cifwk</groupId>
+    <artifactId>ERICtaf_koans</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.217-SNAPSHOT</version>
+
+    <properties>
+        <maven.site.skip>true</maven.site.skip>
+        <maven.site.deploy.skip>true</maven.site.deploy.skip>
+        <java.version>1.7</java.version>
+        <taf.version>2.33.1</taf.version>
+    </properties>
+
+    <scm>
+        <developerConnection>${ericsson.scm.url}/${project.artifactId}</developerConnection>
+        <connection>${ericsson.scm.url}/${project.artifactId}</connection>
+        <tag>ERICtaf_koans-1.0.1</tag>
+    </scm>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>taf-bom</artifactId>
+                <version>${taf.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.sandwich</groupId>
+                <artifactId>koans</artifactId>
+                <version>1.0.6</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>http-tool</artifactId>
+                <version>${taf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>taf-scenario</artifactId>
+                <version>${taf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>testng-runner</artifactId>
+                <version>${taf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ericsson.cifwk</groupId>
+                <artifactId>all-taf-sdk</artifactId>
+                <version>${taf.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>1.4.01</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.ericsson.cifwk.taf</groupId>
+                    <artifactId>taf-maven-plugin</artifactId>
+                    <version>${taf.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.9</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.18.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <modules>
+        <module>basic-taf-koans</module>
+        <module>taf-ui-workshop</module>
+        <module>cli-tool-workshop</module>
+        <module>taf-http-tool-workshop</module>
+        <module>taf-scenario-workshop</module>
+    </modules>
+
+</project>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAF UI Workshop: Basic Components</title>
+    <meta charset="utf-8">
+    <link id="metaLink" rel="next" type="text/html" href="implicit-retries.html">
+    <style type="text/css">
+        .controlBox {
+            padding-left: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed black;
+        }
+
+        .controlBox > * {
+            margin-left: 25px;
+        }
+
+        .controlBox label {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<script src="jquery-2.2.3.min.js"></script>
+
+<script>
+    function clickMe(element) {
+        element.innerHTML = "I was clicked";
+        element.setAttribute("value", "I was clicked");
+    }
+</script>
+
+<div id="container">
+    <h2>Sample controls</h2>
+    <div id="sampleControls">
+
+        <div class="fakeSelectorTarget">
+            <div class="label button fakeSelectorTarget"></div>
+            <span class="fakeSelectorTarget"></span>
+            <a href="javascript:;" class="link fakeSelectorTarget"></a>
+            <a href="javascript:;" class="button fakeSelectorTarget"></a>
+        </div>
+
+        <h3>Buttons:</h3>
+        <div class="controlBox">
+            <button onclick="clickMe(this)">I am button tag</button>
+            <input id="inputButton" type="button" value="I am input of button type" onclick="clickMe(this)"/>
+            <a href="javascript:;" class="link button" onclick="clickMe(this)">I am link button</a>
+            <span class="label button" onclick="clickMe(this)">I am clickable label</span>
+        </div>
+
+
+        <h3>Labels:</h3>
+        <div class="controlBox">
+            <div>Formatted content with <b>bold</b> and <i>italic</i> texts.</div>
+            <div>Nested content containing <span id="nestedLabel">nested content</span>.</div>
+        </div>
+
+
+        <h3>Links:</h3>
+        <div class="controlBox">
+            <a href="http://www.ericsson.com">Anchor link</a>
+        </div>
+
+
+        <h3>Input fields:</h3>
+        <div class="controlBox">
+
+            <h4>Regular text fields:</h4>
+            <input type="text" value="Regular text field"/>
+            <input type="password" value="Password field"/>
+            <input type="hidden" id="hiddenTextBox" value="Hidden text field"/>
+
+            <h4>Other text fields:</h4>
+            <input type="email" id="emailTextBox" value="Email field"/>
+            <input type="tel" id="telephoneBox" value="Telephone field"/>
+            <input type="number" id="numberBox" value="42" title="Only numbers are allowed"/>
+            <input type="search" id="searchBox" value="Search box"/>
+            <input type="url" id="utlBox" value="URL field"/>
+
+            <h4>Date fields:</h4>
+            <input type="date"/>
+            <input type="time"/>
+            <input type="datetime"/>
+            <input type="datetime-local"/>
+            <input type="week"/>
+            <input type="month"/>
+
+            <h4>Other fields:</h4>
+            <input type="range" id="rangeInput"/>
+            <input type="color" id="colorInput"/>
+        </div>
+
+
+        <h3>Checkboxes:</h3>
+        <div class="controlBox">
+            UI Components learned:
+            <input type="checkbox" id="buttonCheckBox" checked="checked"/> <label id="labelForButtonCheckBox"
+                                                                                  for="buttonCheckBox">Button</label>
+            <input type="checkbox" id="labelCheckBox" checked="checked"/> <label for="labelCheckBox">Label</label>
+            <input type="checkbox" id="linkCheckBox" checked="checked"/> <label for="linkCheckBox">Link</label>
+            <input type="checkbox" id="textBoxCheckBox" checked="checked"/> <label for="textBoxCheckBox">TextBox</label>
+            <input type="checkbox" id="checkBox"/> <label for="checkBox">CheckBox</label>
+            <input type="checkbox" id="radioButtonCheckBox"/> <label for="radioButtonCheckBox">RadioButton</label>
+        </div>
+
+
+        <h3>Radiobuttons:</h3>
+        <div class="controlBox">
+            UI Component currently being learned:
+            <input type="radio" name="currentComponent" id="checkBoxRadio" value="value 1" checked="checked"/> <label
+                for="checkBoxRadio">CheckBox</label>
+            <input type="radio" name="currentComponent" id="radioButton" value="value 2"/> <label for="radioButton">RadioButton</label>
+            <input type="radio" name="currentComponent" id="selectRadio" value="value 3"/> <label for="selectRadio">Select</label>
+        </div>
+
+
+        <h3>Select Lists:</h3>
+        <div class="controlBox">
+
+            <label for="regularSelect">Select single:</label>
+            <select id="regularSelect">
+                <option id="option1Id" value="option1">Option 1</option>
+                <option id="option2Id" value="option2">Option 2</option>
+                <option id="option3Id" value="option3" selected>Option 3</option>
+            </select>
+
+            <label for="multiSelect">Select multiple:</label>
+            <select id="multiSelect" multiple="multiple">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+
+        </div>
+
+        <h3>Basic TAF UI components completed</h3>
+
+    </div>
+</div>
+
+</body>
+</html>

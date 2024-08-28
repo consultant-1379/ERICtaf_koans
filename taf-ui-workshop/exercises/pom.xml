@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.cifwk</groupId>
+        <artifactId>taf-ui-workshop</artifactId>
+        <version>1.0.217-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>exercises</artifactId>
+
+	<properties>
+        <selenium.driver_binary.version>2.53.4</selenium.driver_binary.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- TAF UI implementation -->
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>taf-ui-selenium</artifactId>
+        </dependency>
+
+        <!-- UI SDK Common Components -->
+        <dependency>
+            <groupId>com.ericsson.cds</groupId>
+            <artifactId>uisdk-composite-components</artifactId>
+            <version>1.0.11</version>
+        </dependency>
+
+        <!-- TAF dependencies -->
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>data-handler</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.cifwk</groupId>
+            <artifactId>taf-scenario</artifactId>
+        </dependency>
+
+        <!-- Selenium dependencies -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-logging</artifactId>
+                    <groupId>commons-logging</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>selenium-remote-driver</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>tafTests</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.ericsson.cifwk.taf</groupId>
+                                <artifactId>taf-surefire-provider</artifactId>
+                            </dependency>
+                        </dependencies>
+                        <configuration>
+                            <testSourceDirectory>${project.build.sourceDirectory}</testSourceDirectory>
+                            <testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
+                            <printSummary>false</printSummary>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>Windows</id>
+            <activation>
+                <os>
+                    <family>Windows</family>
+                </os>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>taf-ui:unpack-selenium-drivers</id>
+                                <phase>generate-test-resources</phase>
+                                <goals>
+                                    <goal>unpack</goal>
+                                </goals>
+                                <configuration>
+                                    <artifactItems>
+                                        <artifactItem>
+                                            <artifactId>taf-ui-selenium-drivers</artifactId>
+                                            <groupId>com.ericsson.cifwk.selenium.drivers</groupId>
+                                            <version>${selenium.driver_binary.version}</version>
+                                            <classifier>ie-win-${os-bits}</classifier>
+                                            <type>zip</type>
+                                        </artifactItem>
+                                        <artifactItem>
+                                            <artifactId>taf-ui-selenium-drivers</artifactId>
+                                            <groupId>com.ericsson.cifwk.selenium.drivers</groupId>
+                                            <version>${selenium.driver_binary.version}</version>
+                                            <classifier>chrome-win-${os-bits}</classifier>
+                                            <type>zip</type>
+                                        </artifactItem>
+                                        <artifactItem>
+                                            <artifactId>taf-ui-selenium-drivers</artifactId>
+                                            <groupId>com.ericsson.cifwk.selenium.drivers</groupId>
+                                            <version>${selenium.driver_binary.version}</version>
+                                            <classifier>phantomjs-win</classifier>
+                                            <type>zip</type>
+                                        </artifactItem>
+                                    </artifactItems>
+                                    <outputDirectory>${project.build.directory}/selenium-drivers</outputDirectory>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>Linux</id>
+            <activation>
+                <os>
+                    <family>Linux</family>
+                </os>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>taf-ui:unpack-selenium-drivers</id>
+                                <phase>generate-test-resources</phase>
+                                <goals>
+                                    <goal>unpack</goal>
+                                </goals>
+                                <configuration>
+                                    <artifactItems>
+                                        <artifactItem>
+                                            <groupId>com.ericsson.cifwk.selenium.drivers</groupId>
+                                            <artifactId>taf-ui-selenium-drivers</artifactId>
+                                            <version>${selenium.driver_binary.version}</version>
+                                            <classifier>phantomjs-linux-x64</classifier>
+                                            <type>zip</type>
+                                        </artifactItem>
+                                        <artifactItem>
+                                            <groupId>com.ericsson.cifwk.selenium.drivers</groupId>
+                                            <artifactId>taf-ui-selenium-drivers</artifactId>
+                                            <version>${selenium.driver_binary.version}</version>
+                                            <classifier>chrome-linux-${os-bits}</classifier>
+                                            <type>zip</type>
+                                        </artifactItem>
+                                    </artifactItems>
+                                    <outputDirectory>${project.build.directory}/selenium-drivers</outputDirectory>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

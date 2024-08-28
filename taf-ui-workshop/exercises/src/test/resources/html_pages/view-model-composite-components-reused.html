@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TAF UI Workshop: View Model</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div {
+            padding: 5px;
+        }
+
+        .address {
+            border: 1px;
+            padding: 10px;
+            margin: 10px;
+
+            /*
+             * TODO: please set background-color to better see page structure
+             * (e.g. you could use 'lightgreen', 'lightblue', 'lightsalmon', 'lightgrey' as values)
+             */
+
+        }
+
+        .person {
+            border: 1px;
+            padding: 10px;
+            margin: 10px;
+
+            /*
+             * TODO: please set background-color to better see page structure
+             * (e.g. you could use 'lightgreen', 'lightblue', 'lightsalmon', 'lightgrey' as values)
+             */
+
+        }
+
+        .entity {
+            margin: 20px;
+
+            /*
+             * TODO: please set background-color to better see page structure
+             * (e.g. you could use 'lightgreen', 'lightblue', 'lightsalmon', 'lightgrey' as values)
+             */
+
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Please open ViewModel6CompositeComponentsReused.java</h1>
+
+<div id="companyForm" class="office entity">
+    <h1>Company</h1>
+    <div class="address">
+        <h3>Main office address</h3>
+        <p>
+            <label for="field1">City</label>
+            <input type="text" id="field1" class="city" value=""/>
+        </p>
+        <p>
+            <label for="field2">Street</label>
+            <input type="text" id="field2" class="street" value=""/>
+        </p>
+    </div>
+</div>
+
+<div id="employeeForm" class="entity">
+
+    <h1>Employee</h1>
+    <form>
+        <div class="person">
+            <h3>Personal data</h3>
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" name="firstName" class="credential firstName"/>
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" name="lastName" class="credential lastName"/>
+        </div>
+
+        <div class="address homeAddress">
+            <h3>Home address</h3>
+            <label for="homeCity">City</label><input type="text" class="city" id="homeCity"/>
+            <label for="homeStreet">Street</label><input type="text" class="street" id="homeStreet"/>
+        </div>
+
+        <div class="address workAddress">
+            <h3>Work address</h3>
+            <label for="workCity">City</label><input type="text" id="workCity" class="city" />
+            <label for="workStreet">Street</label><input type="text" id="workStreet" class="street" />
+            <label for="workZipCode">ZIP code</label><input type="text" id="workZipCode" class="zip" />
+        </div>
+
+    </form>
+</div>
+
+<div id="managerForm" class="entity">
+
+    <h1>Manager</h1>
+
+    <div class="address homeAddress">
+        <h3>Home address</h3>
+        <label for="managersHomeCity">City</label>
+        <input type="text" class="city" id="managersHomeCity"/>
+        <label for="managersHomeStreet">Street</label>
+        <input type="text" class="street" id="managersHomeStreet"/>
+    </div>
+
+    <div class="person">
+        <h3>Personal data</h3>
+        <label for="managerFirstName">First name</label>
+        <input type="text" id="managerFirstName" name="managerFirstName" class="credential firstName"/>
+        <label for="managerLastName">Last name</label>
+        <input type="text" id="managerLastName" name="managerLastName" class="credential lastName"/>
+    </div>
+
+</div>
+
+<button id="registerButton" onclick="register()">Register</button>
+
+<div id="notificationsContainer">
+</div>
+
+<script language="JavaScript">
+    function register() {
+        var element = document.getElementById('notificationsContainer');
+        if (isValid()) {
+            element.innerHTML = "<h1 class='notification'>OK</h1>";
+        } else {
+            // validation error messages simulation
+            element.innerHTML = "<h1 class='notification'>Please fill in all the fields</h1>";
+        }
+    }
+    function isValid() {
+        // validation simulation
+        var field1 = document.getElementById('firstName').value;
+        var field2 = document.getElementById('lastName').value;
+        var field3 = document.getElementById('homeCity').value;
+        var field4 = document.getElementById('homeStreet').value;
+        var field5 = document.getElementById('workCity').value;
+        var field6 = document.getElementById('workStreet').value;
+        var field7 = document.getElementById('workZipCode').value;
+        var field8 = document.getElementById('managersHomeCity').value;
+        var field9 = document.getElementById('managersHomeStreet').value;
+        var field10 = document.getElementById('managerFirstName').value;
+        var field11 = document.getElementById('managerLastName').value;
+        var field12 = document.getElementById('field1').value;
+        var field13 = document.getElementById('field2').value;
+        return field1 && field2 && field3 && field4 && field5 && field6 && field7 && field8 && field9 && field10 && field11 && field12 && field13;
+    }
+</script>
+
+</body>
+</html>
